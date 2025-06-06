@@ -1,21 +1,96 @@
-body{
-    background-color: rgb(0, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+:root {
+    --text-color: #e12323;
+    --card-front-color: #cb7040;
+    --card-back-color: #2166a3;
 }
 
-#container {
-    display: flex;
+body { 
+    background: url('img/fundo.png');
 }
+
+#container {display: flex;}
+
 .cartao {
     margin: 1rem 1rem;
-    background-color: aqua;
-    height: 20rem;
+    height: auto;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
+    
 }
 
-footer{
-    background-color: rgb(158, 118, 238);
+.cartao__conteudo {
+    background: url(g);
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    height: 100%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.cartao__conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.7vw;
+}
+.cartao__conteudo__pergunta {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.9vw;
+    margin: 0.6rem;
+}
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+}
+.cartao__conteudo__resposta p {
+    background-color: rgb(221, 88, 39);
+    color: rgb(25, 117, 143);
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.6rem;
+    border: 5px solid rgb(105, 8, 8);
+
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+.cartao__conteudo {
+    background-color: var(--card-front-color);
+    text-align: center;
+    /* background-color: aquamarine; */
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+}
+.cartao__conteudo h3 {
+    background-color: rgb(160, 160, 160);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    font-size: 2.5vw;
+    color: var(--text-color);
+    margin: 0.6rem;
+    border: 2px solid rgb(98, 100, 95);
+    backface-visibility: hidden;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(223, 19, 19);
+    color: rgb(214, 214, 214);
     position: fixed;
     bottom: 0;
     width: 100%;
