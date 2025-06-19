@@ -1,0 +1,111 @@
+:root {
+    --text-color: #e9e4f0;
+    --card-front-color: rgb(175, 102, 223);
+    --card-back-color: #52687b;
+}
+
+body { 
+    background: url(img/fruta.jpg)
+}
+
+#container {display: flex;}
+
+.cartao {
+    margin: 1rem 1rem;
+    height: auto;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+    
+}
+
+.cartao__conteudo {
+
+    background-image: url(img/c5a7da4e467b6c3247c9d95e1bec7642.jpg);
+    background-color: var(--card-front-color);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    height: 100%;
+    box-shadow: 0 0 1rem rgba(222, 207, 207, 0.2);
+    border-radius: 1rem;
+}
+
+    
+
+
+.cartao__conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.7vw;
+}
+.cartao__conteudo__pergunta {
+    color: #fffbfb;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.9vw;
+    margin: 0.6rem;
+}
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+}
+.cartao__conteudo__resposta p {
+    background-color: rgb(106, 84, 186);
+    color: rgb(253, 255, 255);
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.6rem;
+    border: 5px solid rgb(53, 50, 114);
+
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+.cartao__conteudo {
+    background-color: var(--card-front-color);
+    text-align: center;
+    /* background-color: aquamarine; */
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+}
+.cartao__conteudo h3 {
+
+    padding: 0.5rem;
+    position: absolute;
+    font-size: 2.5vw;
+    color: var(--text-color);
+    margin: 0.6rem;
+    border: 2px solid  rgb(5, 1, 16);
+    backface-visibility: hidden;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(131, 19, 223);
+    color: rgb(214, 214, 214);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
